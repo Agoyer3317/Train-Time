@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Train Schedule</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style_train.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Moment.js Reference -->
+    <!-- <script src="http://momentjs.com/downloads/moment.js"></script>   -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    
+</head>
+<body>
+  <div class="container">  
+
+    <!-- Jumbotron -->
+    <div class="jumbotron" style="background-color: #428bca;; color: white">
+      <h1 class="text-center">It's Choo-Choo Time</h1>
+      <h3 class="text-center">A Comprehensive Schedule for Traveling by Train</h3>
+    </div>
+    <!-- closes jumbotron -->
+    
+    <!-- train Schedule -->
+    <div class="row">
+      <div class='col-lg-2'></div>
+      <div class="col-lg-8">
+        <div class="card card-primary">
+          <div class="card-heading">
+            <h3 class="card-title text-center"><strong>Train Schedule</strong></h3>
+          </div>
+          <!-- closes card heading -->
+          <div id='tester'></div>
+          <div class="card-body">
+            <table class="table table-hover" id='train-table'>
+              
+              <thead>
+                <tr>
+                  <th class='body-copy'>Train <br>Name</th>
+                  <th class='body-copy'>Destination</th>
+                  <th class='body-copy'>First <br>Train Time</th>
+                  <th class='body-copy'>Frequency <br>(minutes)</th>
+                </tr>
+              </thead>
+
+              <tbody class='body-copy'>
+              <!-- Train Schedule goes here   -->
+              </tbody>
+
+            </table>
+            <!-- closes table   -->
+          </div>  
+          <!-- closes card body   -->
+        </div>
+        <!-- closes card     -->
+      </div>
+      <!-- closes 8 column -->
+      <div class='col-lg-2'></div>
+    </div>
+    <!-- closes row -->
+    <br>
+      
+    <!-- Form: Add Train  -->
+    <div class='row'>
+      <div class='col-lg-2'></div>
+      <div class=col-lg-8>
+        <div class="card card-primary">
+
+          <div class="card-heading">
+            <h3 class="card-title text-center "><strong>Add a Train</strong></h3>
+          </div>
+
+          <div class="card-body">  
+            <!-- Entry Form -->
+              <form>
+                <div class="form-group row">
+                  <label for="train-name" class='body-copy'>Train Name</label>
+                  <input class="form-control" id="train-name" type="text">
+                </div>
+
+                <div class="form-group row">
+                  <label for="destination-input" class='body-copy'>Destination</label>
+                  <input class="form-control" id="destination-input" type="text">
+                </div>
+
+                <div class="form-group row">
+                  <label for="start-input" class='body-copy'>First Train Time (military time)</label>
+                  <input class="form-control" id="start-input" type="text">
+                </div>
+
+                <div class="form-group row">
+                  <label for="frequency-input" class='body-copy'>Frequency (minutes) </label>
+                  <input class="form-control" id="frequency-input" type="text">
+                </div>
+
+                <button class="btn btn-primary" id="train-btn" type="submit">Submit</button>
+              </form>
+          </div>
+          <!-- closes card body -->
+
+        </div>
+        <!-- closes card -->
+      </div>
+      <!-- closes 8 column   -->
+      <div class='col-lg-2'></div>
+    </div>    
+    <!-- closes form row -->
+
+
+</div>
+<!-- closes body container -->
+<footer class="py-5 bg-dark my-footer">
+    <div class="container">
+        <p class="m-0 text-center text-white"> &copy; 2018 Choo-Choo Time. All rights reserved. </p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<!-- firebase  -->
+<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+
+<script src ="trainTime.js"></script>
+
+</body>
+</html>
